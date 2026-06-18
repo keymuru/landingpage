@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond The Ceiling™ — Live Webinar | Belief Alchemist Snehal</title>
+  <meta name="description" content="You don't have a skill problem. You have an Invisible Mental Ceiling problem. Join Belief Alchemist Snehal for a live 1-hour webinar for ₹49.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #111318;
+      --surface: #181B22;
+      --surface2: #202430;
+      --accent: #C8233C;
+      --accent-dim: rgba(200,35,60,0.12);
+      --accent-glow: rgba(200,35,60,0.25);
+      --accent-light: #E8415A;
+      --text: #E8E8EC;
+      --muted: #7A7A8C;
+      --border: rgba(200,35,60,0.22);
+      --border-dim: rgba(255,255,255,0.09);
+      --white: #FFFFFF;
+      --radius: 6px;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(200,35,60,0.08), transparent 28%),
+        linear-gradient(180deg, #101217 0%, #111318 100%);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    button, input { font: inherit; }
+    h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.7rem);
+      line-height: 0.98;
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.6vw, 3.9rem);
+      line-height: 1.03;
+      font-weight: 600;
+      letter-spacing: -0.028em;
+    }
+
+    h3 {
+      font-size: clamp(1.1rem, 2vw, 1.42rem);
+      line-height: 1.15;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: clamp(0.98rem, 1.45vw, 1.05rem);
+      color: var(--muted);
+    }
+
+    .container { width: min(1140px, calc(100% - 2.2rem)); margin: 0 auto; }
+    .section { padding: 6rem 0; position: relative; }
+    .surface { background: linear-gradient(180deg, rgba(24,27,34,0.98), rgba(19,22,28,0.98)); }
+    .surface-soft { background: linear-gradient(180deg, rgba(32,36,48,0.94), rgba(18,21,29,0.96)); }
+    .accent { color: var(--accent); }
+    .accent-italic { color: var(--accent); font-style: italic; }
+    .fi {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .fi.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .section-label::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 56px;
+      padding: 0.95rem 1.65rem;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      transition: transform .25s ease, background .25s ease, box-shadow .25s ease, border-color .25s ease, color .25s ease;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 16px 36px rgba(200,35,60,0.2);
+    }
+    .btn-accent:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 20px 42px rgba(200,35,60,0.28);
+    }
+    .btn-outline-accent {
+      background: transparent;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .btn-outline-accent:hover {
+      background: var(--accent-dim);
+      transform: translateY(-2px);
+    }
+    .btn-wide { min-width: 230px; }
+
+    .top-strip {
+      background: var(--accent);
+      color: var(--white);
+      text-align: center;
+      padding: 0.78rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(17,19,24,0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-dim);
+    }
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--accent);
+      font-size: 1.48rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    #sticky-cta {
+      position: fixed;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      z-index: 999;
+      opacity: 0;
+      transform: translateY(16px);
+      pointer-events: none;
+      transition: opacity .35s ease, transform .35s ease;
+    }
+    #sticky-cta.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #sticky-cta .btn {
+      min-height: 52px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.45);
+    }
+
+    .hero {
+      min-height: calc(100svh - 120px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 78% 18%, rgba(200,35,60,0.18), transparent 0 24%),
+        radial-gradient(circle at 18% 92%, rgba(200,35,60,0.08), transparent 0 18%),
+        linear-gradient(145deg, #111318 0%, #141821 42%, #111318 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 58px 58px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.55), transparent 95%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 44rem;
+      height: 44rem;
+      top: -13rem;
+      right: -13rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(200,35,60,0.04) 44%, transparent 72%);
+      filter: blur(16px);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 6.75rem 0 5rem;
+      max-width: 830px;
+    }
+    .hero-badge,
+    .spots-badge,
+    .ceiling-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-badge {
+      padding: 0.48rem 0.95rem;
+      color: var(--accent);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 { margin-bottom: 1.25rem; max-width: 800px; }
+    .hero-sub {
+      max-width: 720px;
+      margin-bottom: 1.8rem;
+      color: rgba(232,232,236,0.76);
+      font-size: clamp(1.02rem, 1.9vw, 1.2rem);
+    }
+    .spots-badge {
+      padding: 0.46rem 0.9rem;
+      margin-bottom: 1.7rem;
+      color: var(--accent);
+      border: 1px solid rgba(200,35,60,0.36);
+      background: var(--accent-dim);
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 1.55rem;
+    }
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.84rem;
+      color: rgba(232,232,236,0.62);
+    }
+
+    .pain-section { border-top: 1px solid var(--border-dim); }
+    .pain-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.54fr);
+      gap: 2rem;
+      align-items: start;
+    }
+    .pain-lead { margin-bottom: 1.2rem; }
+    .pain-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border-dim);
+      border-bottom: 1px solid var(--border-dim);
+      background: rgba(255,255,255,0.012);
+    }
+    .pain-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.2rem 0.15rem;
+      border-bottom: 1px solid var(--border-dim);
+      cursor: pointer;
+      transition: background .2s ease;
+    }
+    .pain-item:last-child { border-bottom: 0; }
+    .pain-item:hover { background: rgba(255,255,255,0.015); }
+    .pain-item input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+    .pain-check-box {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      margin-top: 0.18rem;
+      border-radius: 6px;
+      border: 2px solid var(--accent);
+      background: transparent;
+      position: relative;
+      transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .pain-check-box::after {
+      content: "";
+      position: absolute;
+      inset: 5px 7px 7px 5px;
+      border-right: 2px solid var(--white);
+      border-bottom: 2px solid var(--white);
+      transform: rotate(45deg) scale(0);
+      transform-origin: center;
+      transition: transform .18s ease;
+    }
+    .pain-item input:checked + .pain-check-box {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(200,35,60,0.12);
+    }
+    .pain-item input:checked + .pain-check-box::after { transform: rotate(45deg) scale(1); }
+    .pain-copy { color: var(--text); }
+    .pain-copy strong { color: var(--white); font-weight: 700; }
+    .pain-side {
+      position: sticky;
+      top: 102px;
+      padding: 1.35rem;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(32,36,48,0.92), rgba(24,27,34,0.92));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .pain-count-card {
+      display: grid;
+      gap: 0.85rem;
+      margin-bottom: 1.2rem;
+    }
+    .pain-counter {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .pain-counter small {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pain-footer {
+      margin-top: 1.3rem;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11,13,18,0.78);
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+      z-index: 1200;
+    }
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .pain-modal {
+      width: min(560px, 100%);
+      background: #202430;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.45), 0 0 0 1px rgba(200,35,60,0.1), 0 0 34px var(--accent-glow);
+      position: relative;
+    }
+    .pain-modal-kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .pain-modal h3 {
+      color: var(--white);
+      font-size: clamp(1.5rem, 3.6vw, 2.1rem);
+      margin-bottom: 0.7rem;
+    }
+    .pain-modal p { color: rgba(232,232,236,0.75); margin-bottom: 1rem; }
+    .pain-modal-fine {
+      display: inline-flex;
+      margin-top: 0.9rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .pain-modal-close {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .belief-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.78fr);
+      gap: 1.8rem;
+      align-items: start;
+    }
+    .belief-body { max-width: 720px; }
+    .belief-quote {
+      padding: 1.35rem 1.35rem 1.35rem 1.15rem;
+      background: rgba(200,35,60,0.06);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: var(--text);
+      font-size: clamp(1.22rem, 2.2vw, 1.55rem);
+      font-style: italic;
+      line-height: 1.45;
+      box-shadow: inset 0 0 0 1px rgba(200,35,60,0.08);
+    }
+    .ceiling-badge {
+      margin-top: 1rem;
+      padding: 0.55rem 0.95rem;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid var(--border);
+    }
+
+    .outcomes-sub { max-width: 760px; margin-bottom: 2rem; }
+    .outcome-list {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+    .outcome-row {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1.15rem;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(24,27,34,0.95), rgba(20,22,29,0.95));
+      border: 1px solid var(--border-dim);
+      transition: border-color .2s ease, transform .2s ease;
+    }
+    .outcome-row:hover {
+      border-color: var(--border);
+      transform: translateY(-2px);
+    }
+    .outcome-num {
+      width: 52px;
+      height: 52px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+    }
+    .outcome-copy strong { display: block; color: var(--white); margin-bottom: 0.24rem; font-size: 1.06rem; }
+    .outcome-copy span { color: var(--muted); }
+    .note {
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-dim);
+      color: var(--muted);
+    }
+    .note strong { color: var(--text); }
+
+    .movement-body { max-width: 760px; margin-bottom: 2rem; }
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .who-card {
+      padding: 1.4rem;
+      background: var(--surface);
+      border: 1px solid var(--border-dim);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--radius);
+      transition: border-color .22s ease, transform .22s ease, box-shadow .22s ease;
+    }
+    .who-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.22);
+    }
+    .who-num {
+      display: inline-flex;
+      margin-bottom: 0.85rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+    .who-card strong { display: block; color: var(--white); margin-bottom: 0.35rem; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+    .about-figure {
+      background: rgba(255,255,255,0.015);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-dim);
+      box-shadow: var(--shadow);
+    }
+    .about-figure img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-bottom: 1px solid var(--accent);
+    }
+    .photo-cap {
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.72rem 0.9rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+    .about-copy p { margin-bottom: 1rem; }
+    .about-quote {
+      margin: 1.35rem 0;
+      padding: 1.1rem 1.2rem;
+      border-left: 4px solid var(--accent);
+      background: rgba(200,35,60,0.06);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: var(--text);
+      font-style: italic;
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      line-height: 1.55;
+    }
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+    }
+    .about-tag {
+      padding: 0.58rem 0.85rem;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.78fr);
+      gap: 1.8rem;
+      align-items: start;
+    }
+    .booking-copy { max-width: 720px; }
+    .value-list {
+      list-style: none;
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+    }
+    .value-list li {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      color: var(--text);
+    }
+    .value-list li::before {
+      content: "✓";
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      display: inline-grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-top: 0.05rem;
+    }
+    .value-list strong { color: var(--white); }
+    .booking-card {
+      padding: 1.5rem;
+      background: var(--surface2);
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.34), 0 0 38px rgba(200,35,60,0.13);
+    }
+    .price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 4.6rem);
+      color: var(--accent);
+      line-height: 0.95;
+      margin-bottom: 0.35rem;
+    }
+    .price-note {
+      display: inline-flex;
+      color: rgba(232,232,236,0.72);
+      margin-bottom: 1.15rem;
+    }
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 1.1rem 0 1rem;
+    }
+    .countdown-unit {
+      padding: 0.9rem 0.65rem;
+      border-radius: var(--radius);
+      text-align: center;
+      background: rgba(200,35,60,0.08);
+      border: 1px solid var(--border);
+    }
+    .countdown-num {
+      display: block;
+      color: var(--accent);
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .countdown-label {
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .spots-final {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.6rem 0.82rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0.45rem 0 1.2rem;
+    }
+    .booking-note {
+      margin-top: 1rem;
+      color: rgba(232,232,236,0.7);
+      font-size: 0.93rem;
+    }
+
+    .footer {
+      padding: 2rem 0 2.8rem;
+      border-top: 1px solid var(--border-dim);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .footer-copy { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .footer-social { display: flex; gap: 1rem; }
+    .footer-social a:hover { color: var(--accent); }
+
+    @media (max-width: 980px) {
+      .pain-wrap,
+      .belief-grid,
+      .about-grid,
+      .booking-grid,
+      .who-grid {
+        grid-template-columns: 1fr;
+      }
+      .pain-side { position: static; }
+    }
+
+    @media (max-width: 720px) {
+      .section { padding: 4.6rem 0; }
+      .container { width: min(100% - 1.3rem, 1140px); }
+      .nav-inner { min-height: 72px; }
+      .nav-cta { display: none; }
+      .hero-inner { padding: 5rem 0 4rem; }
+      .hero-cta-group { flex-direction: column; }
+      .hero-cta-group .btn,
+      #sticky-cta .btn,
+      .booking-card .btn { width: 100%; }
+      .outcome-row { grid-template-columns: 1fr; }
+      .outcome-num { width: 48px; height: 48px; }
+      .countdown { grid-template-columns: repeat(3, 1fr); }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      #sticky-cta { left: 0.8rem; right: 0.8rem; bottom: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip">BEYOND THE CEILING™ — a movement by Belief Alchemist Snehal · Limited seats per session</div>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="nav-logo">Beyond The Ceiling™</a>
+      <a href="YOUR_RAZORPAY_LINK_HERE" class="btn btn-accent nav-cta">Reserve Seat — ₹49</a>
+    </div>
+  </nav>
+
+  <div id="sticky-cta" aria-hidden="true">
+    <a href="YOUR_RAZORPAY_LINK_HERE" class="btn btn-accent">Reserve My Seat — ₹49</a>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner fi show">
+        <div class="hero-badge">⚡ Live Webinar · 1 Hour · ₹49 Only</div>
+        <h1>You Don't Have a Skill Problem. You Have an <span class="accent-italic">Invisible Mental Ceiling</span> Problem.</h1>
+        <p class="hero-sub">You're ambitious, capable, and still working harder than almost everyone around you — yet something keeps deciding how far you actually get. In one live hour, we find out what that something is.</p>
+        <div class="spots-badge">🔥 Seats fill up every live session — limited per session</div>
+        <div class="hero-cta-group">
+          <a href="YOUR_RAZORPAY_LINK_HERE" class="btn btn-accent btn-wide">Reserve My Seat — ₹49</a>
+        </div>
+        <div class="hero-trust">
+          <span>📅 1 Hour · Live, not recorded</span>
+          <span>✅ Beginner friendly</span>
+          <span>⭐ Limited seats</span>
+          <span>🔒 Only ₹49</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface pain-section">
+      <div class="container pain-wrap">
+        <div class="fi">
+          <div class="section-label">Sound Familiar?</div>
+          <h2>You've Done the Work. <span class="accent">The Results Still Don't Match the Effort.</span></h2>
+          <p class="pain-lead">Check the ones that feel uncomfortably familiar.</p>
+          <div class="pain-list">
+            <label class="pain-item">
+              <input class="pain-check" type="checkbox">
+              <span class="pain-check-box" aria-hidden="true"></span>
+              <span class="pain-copy">Stuck at the same level for years, despite <strong>outworking almost everyone</strong> around you.</span>
+            </label>
+            <label class="pain-item">
+              <input class="pain-check" type="checkbox">
+              <span class="pain-check-box" aria-hidden="true"></span>
+              <span class="pain-copy">Confident in front of others, <strong>quietly unsure of yourself</strong> the moment it actually matters.</span>
+            </label>
+            <label class="pain-item">
+              <input class="pain-check" type="checkbox">
+              <span class="pain-check-box" aria-hidden="true"></span>
+              <span class="pain-copy">You start every plan strong. <strong>Three weeks in, you're back where you began.</strong></span>
+            </label>
+            <label class="pain-item">
+              <input class="pain-check" type="checkbox">
+              <span class="pain-check-box" aria-hidden="true"></span>
+              <span class="pain-copy">You overthink the decision so long that <strong>the opportunity simply passes you by.</strong></span>
+            </label>
+            <label class="pain-item">
+              <input class="pain-check" type="checkbox">
+              <span class="pain-check-box" aria-hidden="true"></span>
+              <span class="pain-copy">You <strong>play smaller in rooms</strong> than what you're actually capable of delivering.</span>
+            </label>
+            <label class="pain-item">
+              <input class="pain-check" type="checkbox">
+              <span class="pain-check-box" aria-hidden="true"></span>
+              <span class="pain-copy">You can see the next level clearly. You just <strong>can't explain why you can't reach it.</strong></span>
+            </label>
+          </div>
+          <p class="pain-footer">You don't need more motivation. You need to find what's quietly capping your results. ↓</p>
+        </div>
+
+        <aside class="pain-side fi">
+          <div class="pain-count-card">
+            <span class="section-label">Live Signal</span>
+            <div class="pain-counter"><span id="painCount">0</span><small>selected</small></div>
+            <p>Once this starts stacking up, the pattern is rarely random.</p>
+          </div>
+          <a href="YOUR_RAZORPAY_LINK_HERE" class="btn btn-accent">Reserve My Seat — ₹49</a>
+        </aside>
+      </div>
+    </section>
+
+    <div class="modal-overlay" id="painModalOverlay" aria-hidden="true">
+      <div class="pain-modal" role="dialog" aria-modal="true" aria-labelledby="painModalTitle">
+        <button id="painModalClose" class="pain-modal-close" aria-label="Close modal">✕</button>
+        <div class="pain-modal-kicker">✦ That's not a coincidence</div>
+        <h3 id="painModalTitle">3 or more of those sound exactly like you.</h3>
+        <p>That usually means there's one specific belief sitting underneath all of them — and that's exactly what this live session is built to uncover.</p>
+        <a href="YOUR_RAZORPAY_LINK_HERE" class="btn btn-accent">Reserve My Seat — ₹49</a>
+        <span class="pain-modal-fine">🔥 One live hour · Seats limited per session</span>
+      </div>
+    </div>
+
+    <section class="section surface-soft">
+      <div class="container belief-grid">
+        <div class="fi">
+          <div class="section-label">The Real Problem</div>
+          <h2>It's Not a Skill Gap. <span class="accent">It's a Belief Gap.</span></h2>
+          <p class="belief-body">Most of what you call "stuck" was never about ability. Somewhere in childhood, you formed a belief about what was possible for you — what you deserved, what people like you achieve, how far is "too far." That belief became identity. And identity quietly decides your results, long before talent, effort, or motivation ever get a vote.</p>
+        </div>
+        <div class="fi">
+          <blockquote class="belief-quote serif">"The belief you accepted as true at seven years old could be the same one deciding your bank balance, your confidence, and your ceiling today."</blockquote>
+          <div class="ceiling-badge">✦ We call it the Invisible Mental Ceiling™</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="fi">
+          <div class="section-label">What You'll Walk Away Knowing</div>
+          <h2>This Hour Has One Job: <span class="accent">Make the Invisible, Visible.</span></h2>
+          <p class="outcomes-sub">Each outcome below is specific, personal, and happens live — not pre-recorded, not generic.</p>
+        </div>
+        <div class="outcome-list">
+          <article class="outcome-row fi">
+            <div class="outcome-num">01</div>
+            <div class="outcome-copy"><strong>Identify the Exact Belief Running Your Results</strong><span>Not a generic mindset tip — the specific, personal belief that's been quietly deciding what you do and don't go after.</span></div>
+          </article>
+          <article class="outcome-row fi">
+            <div class="outcome-num">02</div>
+            <div class="outcome-copy"><strong>See Where It Actually Came From</strong><span>How beliefs form in childhood, get mistaken for "the truth," and quietly harden into identity over the next 20+ years.</span></div>
+          </article>
+          <article class="outcome-row fi">
+            <div class="outcome-num">03</div>
+            <div class="outcome-copy"><strong>Watch It Broken Down Live, on a Real Goal</strong><span>We'll take a live attendee's actual goal and unpack the belief sitting underneath it — in front of everyone, in real time.</span></div>
+          </article>
+          <article class="outcome-row fi">
+            <div class="outcome-num">04</div>
+            <div class="outcome-copy"><strong>Leave with One Realization That Re-Frames Everything</strong><span>Most attendees leave saying: "I never realized this belief has been running my life." That's the goal of this hour.</span></div>
+          </article>
+        </div>
+        <p class="note fi">ℹ️ <strong>Note:</strong> This session covers the first step only. What you do with the realization afterward is entirely up to you.</p>
+      </div>
+    </section>
+
+    <section class="section surface">
+      <div class="container">
+        <div class="fi">
+          <div class="section-label">The Movement</div>
+          <h2>Beyond The Ceiling™ <span class="accent">Exists for One Reason</span></h2>
+          <p class="movement-body">To give ambitious people the one piece of awareness most never get...</p>
+        </div>
+        <div class="who-grid">
+          <article class="who-card fi">
+            <span class="who-num">01</span>
+            <strong>Ambitious professionals &amp; entrepreneurs</strong>
+            <p>Already putting in real effort and still feeling a ceiling on results, confidence, or growth.</p>
+          </article>
+          <article class="who-card fi">
+            <span class="who-num">02</span>
+            <strong>People who've tried everything else</strong>
+            <p>Courses, coaches, books — and still find themselves back at the same point. This works one level underneath all of that.</p>
+          </article>
+          <article class="who-card fi">
+            <span class="who-num">03</span>
+            <strong>Anyone who can see the next level</strong>
+            <p>But can't explain why they can't reach it. This session is built to answer exactly that question.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-grid">
+        <figure class="about-figure fi">
+          <img src="snehal.png" alt="Belief Alchemist Snehal">
+          <figcaption class="photo-cap">Belief Alchemist Snehal</figcaption>
+        </figure>
+        <div class="about-copy fi">
+          <div class="section-label">Who You're Learning From</div>
+          <h2>Belief Alchemist <span class="accent">Snehal</span></h2>
+          <p>At 17, Snehal was told by doctors he'd never play competitive sport again after an autoimmune diagnosis. He didn't accept that as the ceiling on his life — and that refusal sent him on a two-decade search through psychology, the science of belief, and human potential.</p>
+          <blockquote class="about-quote serif">"Your limitation was never about ability or motivation — it was a ceiling you couldn't see, because no one ever pointed it out to you."</blockquote>
+          <p>That search became a body of work focused on one question most people never think to ask: not "what am I capable of," but "what do I actually believe is possible for me — and where did that belief come from?"</p>
+          <p>Today, Snehal works with ambitious professionals and entrepreneurs to find the Invisible Mental Ceiling sitting underneath their stated goals — starting with the same live exercise you'll experience in this session.</p>
+          <div class="about-tags">
+            <span class="about-tag">🧠 Belief Alchemist</span>
+            <span class="about-tag">🎯 Mental Ceiling Expert</span>
+            <span class="about-tag">📅 Live Webinars</span>
+            <span class="about-tag">💡 20+ Years Research</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface-soft" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-copy fi">
+          <div class="section-label">One Decision Away</div>
+          <h2>One Live Hour. <span class="accent">One Realization. ₹49.</span></h2>
+          <p>Don't let another month pass without finally finding what's been quietly deciding your results.</p>
+          <ul class="value-list">
+            <li><span><strong>1-hour live webinar</strong> hosted by Belief Alchemist Snehal — not recorded, live only</span></li>
+            <li><span><strong>Identify the exact belief</strong> running your results — personal, not generic</span></li>
+            <li><span><strong>See how it formed</strong> and why it's been mistaken for "the truth" for years</span></li>
+            <li><span><strong>Watch a real goal unpacked live</strong> — in front of everyone, in real time</span></li>
+            <li><span><strong>Leave with one realization</strong> that re-frames everything you do next</span></li>
+          </ul>
+        </div>
+        <aside class="booking-card fi">
+          <div class="price">₹49</div>
+          <span class="price-note">was ₹999 · Limited early access offer</span>
+          <div class="countdown" aria-label="Countdown timer">
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cd-hours">48</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cd-minutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cd-seconds">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+          <div class="spots-final">🔥 <span><span id="spots-final">9</span> seats currently showing for this session</span></div>
+          <a href="YOUR_RAZORPAY_LINK_HERE" class="btn btn-accent">Join The Movement — Reserve My Seat</a>
+          <p class="booking-note">🔒 Secure via Razorpay · Seats are capped to keep the live exercise personal.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        <span>© 2026 Beyond The Ceiling™ · All Rights Reserved</span>
+        <span>|</span>
+        <span>Transform Beliefs. Transform Lives.</span>
+        <span>· @beliefalchemistsnehal</span>
+      </div>
+      <div class="footer-social">
+        <a href="YOUR_INSTAGRAM_URL_HERE" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="YOUR_YOUTUBE_URL_HERE" target="_blank" rel="noreferrer">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const endKey = 'snehal_cd_end_gr';
+      const spotsKey = 'snehal_spots_gr';
+      const hoursEl = document.getElementById('cd-hours');
+      const minutesEl = document.getElementById('cd-minutes');
+      const secondsEl = document.getElementById('cd-seconds');
+      const spotsEl = document.getElementById('spots-final');
+      const stickyCta = document.getElementById('sticky-cta');
+      const fiEls = document.querySelectorAll('.fi');
+      const painChecks = Array.from(document.querySelectorAll('.pain-check'));
+      const painCountEl = document.getElementById('painCount');
+      const painModalOverlay = document.getElementById('painModalOverlay');
+      const painModalClose = document.getElementById('painModalClose');
+      let nextThreshold = 3;
+
+      const pad = (value) => String(value).padStart(2, '0');
+
+      let storedEnd = Number(localStorage.getItem(endKey));
+      if (!storedEnd || storedEnd < Date.now()) {
+        storedEnd = Date.now() + (48 * 60 * 60 * 1000);
+        localStorage.setItem(endKey, String(storedEnd));
+      }
+
+      function updateCountdown() {
+        const now = Date.now();
+        let diff = storedEnd - now;
+        if (diff <= 0) {
+          storedEnd = Date.now() + (48 * 60 * 60 * 1000);
+          localStorage.setItem(endKey, String(storedEnd));
+          diff = storedEnd - Date.now();
+        }
+        const totalSeconds = Math.floor(diff / 1000);
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        hoursEl.textContent = pad(hours);
+        minutesEl.textContent = pad(minutes);
+        secondsEl.textContent = pad(seconds);
+      }
+
+      let storedSpots = Number(localStorage.getItem(spotsKey));
+      if (!storedSpots || storedSpots < 7 || storedSpots > 10) {
+        storedSpots = Math.floor(Math.random() * 4) + 7;
+        localStorage.setItem(spotsKey, String(storedSpots));
+      }
+      spotsEl.textContent = String(storedSpots);
+
+      function toggleStickyCta() {
+        const show = window.scrollY > 600;
+        stickyCta.classList.toggle('visible', show);
+        stickyCta.setAttribute('aria-hidden', show ? 'false' : 'true');
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.07,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      fiEls.forEach((el) => {
+        if (!el.classList.contains('show')) observer.observe(el);
+      });
+
+      function openPainModal() {
+        painModalOverlay.classList.add('open');
+        painModalOverlay.setAttribute('aria-hidden', 'false');
+      }
+
+      function closePainModal() {
+        painModalOverlay.classList.remove('open');
+        painModalOverlay.setAttribute('aria-hidden', 'true');
+        if (nextThreshold === 3) {
+          nextThreshold = 5;
+        } else if (nextThreshold === 5) {
+          nextThreshold = null;
+        }
+      }
+
+      function updatePainState() {
+        const count = painChecks.filter((input) => input.checked).length;
+        painCountEl.textContent = String(count);
+        if (nextThreshold !== null && count >= nextThreshold && !painModalOverlay.classList.contains('open')) {
+          openPainModal();
+        }
+      }
+
+      painChecks.forEach((input) => {
+        input.addEventListener('change', updatePainState);
+      });
+
+      painModalClose.addEventListener('click', closePainModal);
+      painModalOverlay.addEventListener('click', (event) => {
+        if (event.target === painModalOverlay) closePainModal();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && painModalOverlay.classList.contains('open')) {
+          closePainModal();
+        }
+      });
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      toggleStickyCta();
+      window.addEventListener('scroll', toggleStickyCta, { passive: true });
+      updatePainState();
+    }());
+  </script>
+</body>
+</html>
